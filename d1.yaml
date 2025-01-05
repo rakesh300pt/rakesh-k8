@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo3
+  name: demo3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo3
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo3
+    spec:
+      containers:
+      - image: adikarthik/demo
+        name: demo
+        ports:
+        - containerPort: 9093
+        resources: {}
+status: {}
